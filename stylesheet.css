@@ -1,0 +1,197 @@
+html {
+    background-color: #d5d7dd;
+}
+
+.title {
+    position: relative;
+    font-family: 'Klee One', cursive;
+    width: 100%;
+    font-size: 24px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#titleInput {
+    font-family: 'Klee One', cursive;
+    font-size: 24px;
+    width: 50%;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mainArea {
+    position: absolute;
+    width: 74%;
+    height: 95%;
+    border: solid 2px #4e4e4e;
+    border-radius: 5px;
+    background-color: #eaeffd;
+}
+
+.note {
+    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px); /* 罫線の色と太さ  */
+    background-size: 100% 22px; /* 行の高さ */
+    line-height: 22px; /* 文字の高さ */
+    padding-bottom: 1px; /* 最終行の下にも罫線を引く */
+    background-color: #ffffff;
+}
+
+.mainText {
+    font-family: 'Klee One', cursive;
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 50%;
+    overflow: scroll;
+}
+
+.sideArea {
+    position: relative;
+    float: right;
+    width: 24%;
+    height: 95%;
+    border: solid 2px #4e4e4e;
+    border-radius: 5px;
+    left: -1%;
+    overflow: scroll;
+    background-color: #eaeffd;
+}
+
+.sideAreaContent {
+    position: relative;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: solid 2px #9db2df;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #adc8f0;
+}
+
+.contentTitle {
+    border-bottom: solid 2px #9db2df;
+    background-color: #9db2df;
+}
+
+.sideAreaPart {
+    margin: 5px;
+}
+
+#presenterInputLabel {
+    font-size: 16px;
+}
+
+#editEnableLabel {
+    font-size: 16px;
+}
+
+#audienceInputLabel {
+    font-size: 16px;
+}
+
+#audienceTitle {
+    font-size: 16px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: solid 1px #000000;
+    text-align: center;
+}
+
+.inputArea {
+    position: absolute;
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 98%;
+    height: 40%;
+    bottom: 1%;
+    border-radius: 10px;
+    border: solid 2px #39599e;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #ffffff;
+}
+
+.commentArea {
+    top: 15px;
+    position: relative;
+    background-color: #adc8f0;
+    display: block;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+.commentMark {
+    top: 15px;
+    content: "";
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border: 15px solid transparent;
+    border-top: 15px solid #adc8f0;
+}
+
+.people {
+    display: flex;
+    position: relative;
+    overflow: scroll;
+}
+
+.selectedDiv {
+    border-bottom: solid 2px #325ef1;
+}
+
+.selectedPar {
+    border: solid 2px #325ef1;
+}
+
+#commentInput {
+    width: 80%;
+    height: 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+#commentEnter {
+    font-size: 18px;
+}
+
+#topicEnter {
+    font-size: 18px;
+}
+
+.person {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: solid 2px transparent;
+}
+
+.personName {
+    text-align: center;
+}
+
+.personImage {
+    width: 60px;
+    height:110px;
+}
+
+.selected {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: solid 2px #325ef1;
+}

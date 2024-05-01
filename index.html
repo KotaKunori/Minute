@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>議事録システム</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Klee+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon.ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon.ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="resources/favicon.ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="resources/favicon.ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="resources/favicon.ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="resources/favicon.ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="resources/favicon.ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="resources/favicon.ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon.ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="resources/favicon.ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon.ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon.ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon.ico/favicon-16x16.png">
+        <link rel="manifest" href="resources/favicon.ico/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="resources/favicon.ico/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="container">
+            <div class="mainArea">
+                <div class="title">タイトル: <input type="text" id="titleInput"></div>
+                <div class="mainText">
+
+                </div>
+                <div class="inputArea">
+                    <div class="commentArea">
+                        <input type="checkbox" id="topicEnter" value="addTopic" checked="true">話題の追加
+                        <input type="checkbox" id="anckerEnter" value="addAncker">矢印の追加<br>
+                        <input type="text" id="commentInput">
+                        <input type="button" id="commentEnter" value="入力" onclick="enter()">
+                    </div>
+                    <div class="commentMark"></div>
+                    <div class="people">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="sideArea">
+                <div class="sideAreaContent fileArea"><div class="contentTitle">ファイル</div>
+                    <div class="sideAreaPart">
+                        <input type="button" id="outputButton" value="txt形式で書出" onclick="save()">
+                    </div>
+                    <div class="sideAreaPart">
+                        <input type="button" id="moveButton" value="HPに移動" onclick="window.open('http://ks.ee.kansai-u.ac.jp/wp-admin/index.php')">
+                    </div>
+                </div>
+                <div class="sideAreaContent editArea"><div class="contentTitle">議事録の編集</div>
+                    <div class="sideAreaPart">
+                        <label id="presenterInputLabel" for="presenterInput">発表者の追加</label>
+                        <input type="text" id="presenterInput">
+                        <input type="button" id="presenterEnter" value="追加" onclick="enterPresenter()">
+                    </div>
+                    <div class="sideAreaPart">
+                        <input type="checkbox" id="editEnable" value="edit"><label id="editEnableLabel" for="editEnable">議事録の編集を有効化</label>
+                    </div>
+                </div>
+                <div class="sideAreaContent audienceArea"><div class="contentTitle">聴衆の編集</div>
+                    <div class="sideAreaPart">
+                        <div id="audienceTitle">聴衆を選択</div>
+                        <input type="button" id="audienceSelectEnter" value="決定" onclick="selectPeople()">
+                    </div>
+                    <div class="sideAreaPart">
+                        <label id="audienceInputLabel" for="audienceInput">聴衆を追加</label>
+                        <input type="text" id="audienceInput">
+                        <input type="button" id="audienceEnter" value="追加" onclick="createPerson()">
+                    </div>
+                </div>
+            </div>
+        </dive>
+        <script type="text/javascript" src="createPeople.js"></script>
+    </body>
+</html>
