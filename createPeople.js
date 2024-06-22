@@ -70,7 +70,7 @@ function getResources() {
     }
 
     function showMembers(str) {
-        var tmp = str.split('\r\n');
+        var tmp = str.split(/\r\n|\n/);
         for(var i = 0; i < tmp.length; i++) {
             members[i] = tmp[i].split(',');
         }
